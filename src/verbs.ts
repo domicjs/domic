@@ -341,9 +341,9 @@ export class ScrollRepeater<T> extends Repeater<T> {
 export function Repeat<T>(ob: T[], render: RenderFn<T>): Node;
 export function Repeat<T>(ob: ObservableProxy<T[]>, render: RenderFnProxy<T>): Node
 export function Repeat<T>(ob: Observable<T[]>, render: RenderFn<T>): Node
-export function Repeat<T>(
-  ob: MaybeObservable<T[]>,
-  render: RenderFn<T>
+export function Repeat(
+  ob: any,
+  render: any
 ): Node {
   return Repeater.create(ob, render)
 }
@@ -352,9 +352,9 @@ export function Repeat<T>(
 export function RepeatScroll<T>(ob: T[], render: RenderFn<T>, scroll_buffer_size?: number): Node;
 export function RepeatScroll<T>(ob: ObservableProxy<T[]>, render: RenderFnProxy<T>, scroll_buffer_size?: number): Node;
 export function RepeatScroll<T>(ob: Observable<T[]>, render: RenderFn<T>, scroll_buffer_size?: number): Node;
-export function RepeatScroll<T>(
-  ob: MaybeObservable<T[]>,
-  render: RenderFn<T>,
+export function RepeatScroll(
+  ob: any,
+  render: any,
   scroll_buffer_size = 10
 ): Node {
   return ScrollRepeater.create(ob, render, scroll_buffer_size)
